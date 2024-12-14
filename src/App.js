@@ -14,8 +14,8 @@ function App() {
    <Navbar/>
    <Routes>
         <Route path="/" element={<HomePage />}/>
-        <Route path="/admin_dashboard" element={<AdminDashboard />}/>
-        <Route path="/product_details/:id" element={<ProductDetails />}/>
+        <Route path="/admin-dashboard" element={<AdminDashboard />}/>
+        <Route path="/product-details/:id" element={<ProductDetails />}/>
       </Routes>
    </>
   );
