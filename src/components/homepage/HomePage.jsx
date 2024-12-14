@@ -39,7 +39,7 @@ const HomePage = () => {
                     <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
                         {filterData && filterData?.map((item) => (
                             <div key={item.id} className="group relative border p-5 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300">
-                                <Link to={`/product_details/${item.id}`}>
+                                <Link to={`/product-details/${item.id}`}>
                                     <img
                                         alt={item.imageAlt}
                                         src={item.image}
