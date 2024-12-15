@@ -99,7 +99,7 @@ const AddProductModal = ({ isOpen, setIsOpen, modalType, editData, id }) => {
                 {loading && <Loader />}
                 <div className="bg-white w-full max-w-lg mx-4 p-6 rounded-lg shadow-lg">
                     <div className="flex justify-between items-center">
-                        <h2 className="text-xl font-semibold text-gray-800">Add Product</h2>
+                        <h2 className="text-xl font-semibold text-gray-800">{modalType === "edit" ? "Update Product" : "Add Product"}</h2>
                     </div>
                     <div className="mt-4">
                         <form onSubmit={handleSubmit(onSubmit)}>
