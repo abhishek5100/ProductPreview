@@ -9,10 +9,13 @@ const HomePage = () => {
     
     const { data: ProductList, isLoading, error } = useProductData()
 
-    const filterData = ProductList?.filter((item) => {
-        const matchesKeyword = item.title.toLowerCase().includes(searchKeyword.toLowerCase()) || item.description.toLowerCase().includes(searchKeyword.toLowerCase());
-        return matchesKeyword;
-    });
+  const filterData = Array.isArray(ProductList) 
+        ? ProductList.filter((item) => {
+            const matchesKeyword = item.title.toLowerCase().includes(searchKeyword.toLowerCase()) || item.description.toLowerCase().includes(searchKeyword.toLowerCase());
+            return matchesKeyword;
+        })
+        : [];
+
     const handleKeywordChange = (e) => {
         setSearchKeyword(e.target.value);
     };
