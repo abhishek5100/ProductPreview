@@ -5,7 +5,7 @@ import Loader from "../loader/Loader";
 import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 
-const AddProductModal = ({ isOpen, setIsOpen, modalType, editData, id }) => {
+const AddProductModal = ({ isOpen, setIsOpen, modalType, editData, id , setEditData }) => {
     const [loading, setLoading] = useState(false);
     
     const Schema = Yup.object({
@@ -81,6 +81,7 @@ const AddProductModal = ({ isOpen, setIsOpen, modalType, editData, id }) => {
     const handleCloseModal = () => {
         setIsOpen(false);
         setError("")
+        setEditData({})
         reset()
     };
 
