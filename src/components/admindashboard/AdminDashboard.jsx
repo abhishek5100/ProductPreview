@@ -61,7 +61,7 @@ const AdminDashboard = () => {
 
     return (
         <>
-            <AddProductModal isOpen={isOpen} setIsOpen={setIsOpen} modalType={modalType} editData={editData} id={id} />
+            <AddProductModal isOpen={isOpen} setIsOpen={setIsOpen} modalType={modalType} setEditData = {setEditData} editData={editData} id={id} />
             <div className="flex flex-col justify-center mt-5 md:flex-row gap-4 mb-4">
                 <select
                     value={searchCategory}
