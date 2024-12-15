@@ -7,7 +7,7 @@ const AdminDashboard = () => {
     const [isOpen, setIsOpen] = useState(false)
     const [loading, setLoading] = useState(false)
     const [modalType, setModalType] = useState("")
-    const [editData, setEditData] = useState("")
+    const [editData, setEditData] = useState({})
     const [id, setId] = useState(null)
     const [searchCategory, setSearchCategory] = useState('all');
     const [searchKeyword, setSearchKeyword] = useState('');
